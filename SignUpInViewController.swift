@@ -46,7 +46,7 @@ class SignUpInViewController: UIViewController {
 		var userPassword = password.text
 		
 		PFUser.logInWithUsernameInBackground(userEmailAddress, password:userPassword) {
-			(user: PFUser!, error: NSError!) -> Void in
+			(user: PFUser?, error: NSError?) -> Void in
 			if user != nil {
 				dispatch_async(dispatch_get_main_queue()) {
 					self.performSegueWithIdentifier("signInToNavigation", sender: self)

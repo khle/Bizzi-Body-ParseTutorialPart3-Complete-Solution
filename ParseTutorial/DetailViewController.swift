@@ -43,7 +43,7 @@ class DetailViewController: UIViewController {
 			updateObject["nameLocal"] = nameLocal.text
 			updateObject["capital"] = capital.text
 			updateObject["currencyCode"] = currencyCode.text
-			updateObject.ACL = PFACL(user: PFUser.currentUser())
+			updateObject.ACL = PFACL(user: PFUser.currentUser()!)
 			
 			// Save the data back to the server in a background task
 			updateObject.saveEventually()
